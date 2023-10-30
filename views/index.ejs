@@ -1,12 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=h1, initial-scale=1.0">
-    <title>The OJ</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-    <h1>Hello world</h1>
-</body>
-</html>
+<%- include('partials/navbar.ejs') %>
+
+    <div class="container">
+        <h1>Problems</h1>
+        <div class="sort-search">
+            <label for="sort-by" class="sort-label">Sort by: </label>
+            <select id="sort-by">
+                <option value="CODE" selected>CODE</option>
+                <option value="Name">Name</option>
+                <option value="Difficulty">Difficulty</option>
+            </select>
+            <form method="post" action="/search">
+                <div class="search-container">
+                    <input type="text" placeholder="Search problem by name" name="query" class="search-input" />
+                    <button type="submit" id="search">Search</button>
+                </div>
+            </form>
+        </div>
+        <table>
+            <tr class="head-row">
+                <th>
+                    CODE
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Difficulty
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    CODE
+                </td>
+                <td>
+                    Problem Name
+                </td>
+                <td>
+                    Difficulty
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    CODE
+                </td>
+                <td>
+                    Problem Name
+                </td>
+                <td>
+                    Difficulty
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    </body>
+
+    </html>
