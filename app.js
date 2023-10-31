@@ -25,6 +25,18 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+app.get("/register", (req, res) => {
+    res.render("account",{
+      entrypoint: "Register",
+    });
+});
+
+app.get("/login", (req, res) => {
+  res.render("account", {
+    entrypoint: "Login",
+  });
+});
+
 app.listen(PORT, (req, res) => {
     console.log("App is listening on port: " + PORT);
     console.log("http://localhost:" + PORT);

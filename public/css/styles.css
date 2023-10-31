@@ -19,7 +19,14 @@ nav a {
 }
 
 nav ul a {
+    border: 2px solid #bdbdbd;
+    color: #bdbdbd;
+    border-radius: 5px;
+}
+
+nav ul a:hover {
     border: 2px solid white;
+    color: white;
     border-radius: 10%;
 }
 
@@ -97,4 +104,57 @@ table {
 
 #search:hover {
     background-color: #333;
+}
+
+.container-account {
+    background-color: black;
+    color: white;
+    margin: 20vh auto;
+    height: 370px;
+    width: 220px;
+    padding: 24px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.container-account input {
+    background-color: black;
+    color: #fff;
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+    padding: 6px;
+    margin: 8px;
+    width: 200px;
+}
+
+.container-account input:hover {
+    border: 1px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    transition: background-color 0.3s;
+}
+
+.container-account button {
+    margin: 8px;
+    position: absolute;
+    padding: 6px;
+    background-color: black;
+    color: #ccc;
+    font-size: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    left: 25%;
+}
+
+.container-account button:hover {
+    border: 2px solid white;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.container-account label {
+    margin: 8px;
+    font-size: 18px;
 }

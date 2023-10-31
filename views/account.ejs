@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The OJ</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<header>
+  <nav>
+    <div class="logo">
+      <h1><a href="/">The OJ</a></h1>
+    </div>
+  </nav>
+</header>
+<main>
+    <div class="container-account">
+        <h1><%= entrypoint %></h1>
+        <br>
+        <form action="/<%= entrypoint %>" method="post">
+        <label for="username">Username</label>
+        <br>
+        <input type="text" name="email">
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input type="email" name="email">
+        <br>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" name="password">
+        <br>
+        <label for="confirm-password">Confirm password</label>
+        <br>
+        <input type="confirm-password" name="confirm-password">
+        <br>
+        <button type="submit"><%= entrypoint %></button>
+      </form>
+    </div>
+</main>
+</body>
+
+</html>
