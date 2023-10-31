@@ -18,38 +18,17 @@
         </div>
         <table>
             <tr class="head-row">
-                <th>
-                    CODE
-                </th>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Difficulty
-                </th>
+                <th>CODE</th>
+                <th>Name</th>
+                <th>Difficulty</th>
             </tr>
+            <% for(let i=0; i<problems.length; i++) {%>
             <tr>
-                <td>
-                    CODE
-                </td>
-                <td>
-                    Problem Name
-                </td>
-                <td>
-                    Difficulty
-                </td>
+                <td><%= problems[i].CODE %></td>
+                <td><%= problems[i].Name %></td>
+                <td><%= problems[i].Difficulty %></td>
             </tr>
-            <tr>
-                <td>
-                    CODE
-                </td>
-                <td>
-                    Problem Name
-                </td>
-                <td>
-                    Difficulty
-                </td>
-            </tr>
+            <% } %>
         </table>
     </div>
 

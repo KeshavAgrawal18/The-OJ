@@ -4,6 +4,9 @@ const PORT = process.env.PORT;
 const app = express();
 const bodyParser =require("body-parser");
 const mongoose = require("mongoose");
+const model = require("./userModel");
+const User = model.User;
+const Problem = model.Problem;
 
 app.use(express.static(__dirname + "/public"))
 app.set("view engine", "ejs");
@@ -22,7 +25,16 @@ mongoose.connect(process.env.MONGODB_URL, {
   });  
 
 app.get("/", (req, res) => {
-    res.render("index");
+  Problem.find()
+  .then(problems => {
+    console.log(problems);
+    res.render("index", {
+      problems: problems,
+    });
+  })
+  .catch(error => {
+    console.log(error);
+  });
 });
 
 app.get("/register", (req, res) => {
