@@ -26,7 +26,13 @@
             <tr>
                 <td><%= problems[i].CODE %></td>
                 <td><%= problems[i].Name %></td>
-                <td><%= problems[i].Difficulty %></td>
+                <% if(problems[i].Difficulty === "Easy") { %>
+                <td style="color:green"><%=problems[i].Difficulty  %></td>
+                <% } else if(problems[i].Difficulty === "Medium") {%>
+                <td style="color:orange"><%=problems[i].Difficulty  %></td>
+                <% } else { %>
+                <td style="color:red"><%=problems[i].Difficulty  %></td>
+                <% } %>
             </tr>
             <% } %>
         </table>
